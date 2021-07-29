@@ -12,7 +12,7 @@ All lists are obtained from public sources.
 
 ## Download links
 
-All addresses are stored in .txt files with CIDRs, where each range is on a new line.
+All addresses are stored in `.txt` files with CIDRs, where each range is on a new line.
 
 ### Google (Cloud)
 
