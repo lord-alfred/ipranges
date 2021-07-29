@@ -10,6 +10,7 @@ set -euo pipefail
 set -x
 
 
+
 # get from public ranges
 curl -s https://www.gstatic.com/ipranges/goog.txt > /tmp/goog.txt
 curl -s https://www.gstatic.com/ipranges/cloud.json > /tmp/cloud.json
@@ -52,5 +53,5 @@ grep ':' /tmp/netblocks.txt >> /tmp/google-ipv6.txt
 
 
 # sort & uniq
-sort -hu /tmp/google-ipv4.txt > google/ipv4.txt
-sort -hu /tmp/google-ipv6.txt > google/ipv6.txt
+sort -h /tmp/google-ipv4.txt | uniq > google/ipv4.txt
+sort -h /tmp/google-ipv6.txt | uniq > google/ipv6.txt
