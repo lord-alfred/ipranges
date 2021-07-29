@@ -11,8 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Download Google IPs
-        run: bash google/downloader.sh
+      - name: Download IPs
+        run: |
+          bash google/downloader.sh
+          bash amazon/downloader.sh
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -36,6 +38,7 @@ jobs:
         run: |
           set -euo pipefail
           python utils/merge.py --source=google/ipv4.txt | sort -h > google/ipv4_merged.txt
+          python utils/merge.py --source=amazon/ipv4.txt | sort -h > amazon/ipv4_merged.txt
 
       - name: Commit files
         env:
