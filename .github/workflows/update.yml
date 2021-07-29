@@ -14,6 +14,29 @@ jobs:
       - name: Download Google IPs
         run: bash google/downloader.sh
 
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('utils/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: |
+          pip install -r utils/requirements.txt
+
+      - name: Merge IPv4 ranges
+        run: |
+          set -euo pipefail
+          python utils/merge.py --source=google/ipv4.txt | sort -h > google/ipv4_merged.txt
+
       - name: Commit files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
