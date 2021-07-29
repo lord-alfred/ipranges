@@ -2,7 +2,7 @@ name: "Update"
 
 on:
   schedule:
-    - cron: '8 */12 * * *' # At minute 8 past every 12th hour
+    - cron: '8 */8 * * *' # At minute 8 past every 8th hour
 
 jobs:
   updater:
@@ -34,7 +34,7 @@ jobs:
         run: |
           pip install -r utils/requirements.txt
 
-      - name: Merge IPv4 ranges
+      - name: Merge Ranges
         run: |
           set -euo pipefail
           # ipv4
