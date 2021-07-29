@@ -2,7 +2,7 @@ name: "Update"
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '8 * * * *'
 #    - cron: '8 */12 * * *' # At minute 8 past every 12th hour
 
 jobs:
@@ -25,6 +25,7 @@ jobs:
           git pull github ${GITHUB_REF} --ff-only
           git add .
           if [ -z "$(git status --porcelain)" ]; then
+            echo 'No changes'
             exit 0
           fi
           git commit -m "Update ip ranges"

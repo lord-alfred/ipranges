@@ -40,7 +40,6 @@ get_dns_spf "_cloud-netblocks.googleusercontent.com" >> /tmp/netblocks.txt
 get_dns_spf "_spf.google.com" >> /tmp/netblocks.txt
 
 
-
 # save ipv4
 grep -v ':' /tmp/goog.txt > /tmp/google-ipv4.txt
 jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/cloud.json >> /tmp/google-ipv4.txt
