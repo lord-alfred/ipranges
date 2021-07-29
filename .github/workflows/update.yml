@@ -1,0 +1,29 @@
+name: "Update"
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+#    - cron: '8 */12 * * *' # At minute 8 past every 12th hour
+
+jobs:
+  updater:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download Google IPs
+        run: bash google/downloader.sh
+
+      - name: Commit files
+        run: |
+          set -euo pipefail
+          git config --local user.email "$(git log --format='%ae' HEAD^!)"
+          git config --local user.name "$(git log --format='%an' HEAD^!)"
+          git remote add github "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git pull github ${GITHUB_REF} --ff-only
+          git add .
+          if [ -z "$(git status --porcelain)" ]; then
+            exit 0
+          fi
+          git commit -m "Update ip ranges"
+          git push github HEAD:${GITHUB_REF}
