@@ -2,8 +2,7 @@ name: "Update"
 
 on:
   schedule:
-    - cron: '8 * * * *'
-#    - cron: '8 */12 * * *' # At minute 8 past every 12th hour
+    - cron: '8 */12 * * *' # At minute 8 past every 12th hour
 
 jobs:
   updater:
