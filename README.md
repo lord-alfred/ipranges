@@ -47,6 +47,16 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv6_merged.txt
 
+## Friendly Repos
+
+- Akamai: https://github.com/SecOps-Institute/Akamai-ASN-and-IPs-List
+- LinkedIn: https://github.com/SecOps-Institute/LinkedInIPLists
+- Facebook: https://github.com/SecOps-Institute/FacebookIPLists
+- Twitter: https://github.com/SecOps-Institute/TwitterIPLists
+- TOR: https://github.com/SecOps-Institute/Tor-IP-Addresses
+- Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
+- Alibaba, Facebook, Linode, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
+
 ## Author
 
 Lord_Alfred
