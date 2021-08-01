@@ -16,6 +16,7 @@ jobs:
           bash amazon/downloader.sh
           bash microsoft/downloader.sh
           bash oracle/downloader.sh
+          bash digitalocean/downloader.sh
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -43,10 +44,13 @@ jobs:
           python utils/merge.py --source=amazon/ipv4.txt | sort -h > amazon/ipv4_merged.txt
           python utils/merge.py --source=microsoft/ipv4.txt | sort -h > microsoft/ipv4_merged.txt
           python utils/merge.py --source=oracle/ipv4.txt | sort -h > oracle/ipv4_merged.txt
+          python utils/merge.py --source=digitalocean/ipv4.txt | sort -h > digitalocean/ipv4_merged.txt
           # ipv6
           python utils/merge.py --source=google/ipv6.txt | sort -h > google/ipv6_merged.txt
           python utils/merge.py --source=amazon/ipv6.txt | sort -h > amazon/ipv6_merged.txt
           python utils/merge.py --source=microsoft/ipv6.txt | sort -h > microsoft/ipv6_merged.txt
+          # oracle not provide ipv6
+          python utils/merge.py --source=digitalocean/ipv6.txt | sort -h > digitalocean/ipv6_merged.txt
 
       - name: Commit files
         env:

@@ -14,7 +14,7 @@ curl -s https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json > /tmp/or
 # save ipv4
 jq '.regions[] | [.cidrs][] | .[].cidr | select(. != null)' -r /tmp/oracle.json > /tmp/oracle-ipv4.txt
 
-# ipv6 not used
+# ipv6 not provided
 
 
 # sort & uniq

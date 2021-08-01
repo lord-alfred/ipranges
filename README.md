@@ -40,6 +40,13 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/oracle/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/oracle/ipv4_merged.txt
 
+### DigitalOcean
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv6_merged.txt
+
 ## Author
 
 Lord_Alfred
