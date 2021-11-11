@@ -1,6 +1,6 @@
 # IPRanges
 
-List all IP ranges from: Google (Cloud), Amazon (AWS), Microsoft (Azure), Oracle (Cloud) and DigitalOcean with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud) and DigitalOcean with daily updates.
 
 All lists are obtained from public sources.
 
@@ -14,7 +14,7 @@ All lists are obtained from public sources.
 
 All addresses are stored in `.txt` files with CIDRs, where each range is on a new line.
 
-### Google (Cloud)
+### Google (Cloud & GoogleBot)
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv4_merged.txt
