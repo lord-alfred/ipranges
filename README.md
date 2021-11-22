@@ -52,6 +52,15 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/digitalocean/ipv6_merged.txt
 
+## All-In-One IPs
+
+A list of IP addresses from all sources combined into one file.
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/all/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/all/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/all/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/all/ipv6_merged.txt
+
 ## Friendly Repos
 
 - Akamai: https://github.com/SecOps-Institute/Akamai-ASN-and-IPs-List
