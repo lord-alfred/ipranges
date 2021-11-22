@@ -21,6 +21,11 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv6_merged.txt
 
+### Bing (Bingbot)
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/bing/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/bing/ipv4_merged.txt
+
 ### Amazon (AWS)
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/amazon/ipv4.txt
