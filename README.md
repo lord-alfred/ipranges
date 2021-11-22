@@ -1,6 +1,6 @@
 # IPRanges
 
-List all IP ranges from: Google (Cloud & GoogleBot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud) and DigitalOcean with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud) and DigitalOcean with daily updates.
 
 All lists are obtained from public sources.
 
