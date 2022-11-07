@@ -7,7 +7,12 @@ set -x
 
 
 # get from public ranges
-curl -s https://www.bing.com/toolbox/bingbot.json > /tmp/bing.json
+curl -s https://www.bing.com/toolbox/bingbot.json > /tmp/bing_original.json
+
+
+# Start from 2 Nov 2022 this list contains hidden character (\u200b) in some prefixes: https://i.imgur.com/I4LiPYr.png
+# With this we remove all unprintable characters:
+tr -cd "[:print:]\n" < /tmp/bing_original.json > /tmp/bing.json
 
 
 # save ipv4
