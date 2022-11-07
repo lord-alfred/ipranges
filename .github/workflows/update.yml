@@ -18,11 +18,12 @@ jobs:
           bash oracle/downloader.sh
           bash digitalocean/downloader.sh
           bash bing/downloader.sh
-          
+          bash github/downloader.sh
+
       - name: Create All-In-One ranges
         run: |
-          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt | sort -h > all/ipv4.txt
-          cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt | sort -h > all/ipv6.txt
+          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt | sort -h > all/ipv4.txt
+          cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt | sort -h > all/ipv6.txt
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -52,6 +53,7 @@ jobs:
           python utils/merge.py --source=oracle/ipv4.txt | sort -h > oracle/ipv4_merged.txt
           python utils/merge.py --source=digitalocean/ipv4.txt | sort -h > digitalocean/ipv4_merged.txt
           python utils/merge.py --source=bing/ipv4.txt | sort -h > bing/ipv4_merged.txt
+          python utils/merge.py --source=github/ipv4.txt | sort -h > github/ipv4_merged.txt
           python utils/merge.py --source=all/ipv4.txt | sort -h > all/ipv4_merged.txt
           # ipv6
           python utils/merge.py --source=google/ipv6.txt | sort -h > google/ipv6_merged.txt
@@ -60,6 +62,7 @@ jobs:
           # oracle not provide ipv6
           python utils/merge.py --source=digitalocean/ipv6.txt | sort -h > digitalocean/ipv6_merged.txt
           # bing not provide ipv6
+          python utils/merge.py --source=github/ipv6.txt | sort -h > github/ipv6_merged.txt
           python utils/merge.py --source=all/ipv6.txt | sort -h > all/ipv6_merged.txt
 
       - name: Commit files
