@@ -1,12 +1,12 @@
 # IPRanges
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub and Facebook (Meta) with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta) and Twitter with daily updates.
 
 All lists are obtained from public sources.
 
 ## List types
 
-`ipv4.txt`/`ipv6.txt` – the list of addresses (IPv4 or IPv6), which is the result of parsing and one or more sources.
+`ipv4.txt`/`ipv6.txt` – the list of addresses (IPv4 or IPv6), which is the result of parsing one or more sources.
 
 `ipv4_merged.txt`/`ipv6_merged.txt` – list of addresses, after combining them into the smallest possible list of CIDRs.
 
@@ -66,6 +66,13 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/facebook/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/facebook/ipv6_merged.txt
 
+### Twitter
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/twitter/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/twitter/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/twitter/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/twitter/ipv6_merged.txt
+
 ## All-In-One IPs
 
 A list of IP addresses from all sources combined into one file.
@@ -79,10 +86,9 @@ A list of IP addresses from all sources combined into one file.
 
 - Akamai: https://github.com/SecOps-Institute/Akamai-ASN-and-IPs-List
 - LinkedIn: https://github.com/SecOps-Institute/LinkedInIPLists
-- Twitter: https://github.com/SecOps-Institute/TwitterIPLists
 - TOR: https://github.com/SecOps-Institute/Tor-IP-Addresses
 - Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
-- Alibaba, Facebook, Linode, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
+- Alibaba, Linode, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
 
 ## Author
 

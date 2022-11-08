@@ -18,10 +18,10 @@ get_routes() {
     whois -h whois.bgp.net.br -- "-i origin $1" | grep '^route' | awk '{ print $2; }'
 }
 
-get_routes 'AS32934' > /tmp/facebook.txt
-get_routes 'AS54115' >> /tmp/facebook.txt
-get_routes 'AS63293' >> /tmp/facebook.txt
-get_routes 'AS149642' >> /tmp/facebook.txt
+get_routes 'AS32934' > /tmp/facebook.txt || echo 'failed'
+get_routes 'AS54115' >> /tmp/facebook.txt || echo 'failed'
+get_routes 'AS63293' >> /tmp/facebook.txt || echo 'failed'
+get_routes 'AS149642' >> /tmp/facebook.txt || echo 'failed'
 
 
 # save ipv4
