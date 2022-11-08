@@ -79,7 +79,6 @@ A list of IP addresses from all sources combined into one file.
 
 - Akamai: https://github.com/SecOps-Institute/Akamai-ASN-and-IPs-List
 - LinkedIn: https://github.com/SecOps-Institute/LinkedInIPLists
-- Facebook: https://github.com/SecOps-Institute/FacebookIPLists
 - Twitter: https://github.com/SecOps-Institute/TwitterIPLists
 - TOR: https://github.com/SecOps-Institute/Tor-IP-Addresses
 - Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
