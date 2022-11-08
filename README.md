@@ -94,4 +94,4 @@ A list of IP addresses from all sources combined into one file.
 
 Lord_Alfred
 
-Blog (Russian language): [https://t.me/lord_Alfred](https://t.me/lord_Alfred)
+Blog (Russian language): [https://t.me/Lord_Alfred](https://t.me/Lord_Alfred)
