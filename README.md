@@ -1,6 +1,6 @@
 # IPRanges
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean and GitHub with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub and Facebook (Meta) with daily updates.
 
 All lists are obtained from public sources.
 
@@ -58,6 +58,13 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv4_merged.txt
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv6_merged.txt
+
+### Facebook (Meta)
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/facebook/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/facebook/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/facebook/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/facebook/ipv6_merged.txt
 
 ## All-In-One IPs
 
