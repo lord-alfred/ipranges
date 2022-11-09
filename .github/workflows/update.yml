@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install WHOIS client
+        run: sudo apt install -y whois
+
       - name: Download IPs
         run: |
           bash google/downloader.sh
