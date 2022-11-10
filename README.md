@@ -1,5 +1,7 @@
 # IPRanges
 
+![IP Ranges](logo.png)
+
 List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta) and Twitter with daily updates.
 
 All lists are obtained from public sources.
