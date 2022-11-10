@@ -24,11 +24,12 @@ jobs:
           bash github/downloader.sh
           bash facebook/downloader.sh
           bash twitter/downloader.sh
+          bash linode/downloader.sh
 
       - name: Create All-In-One ranges
         run: |
-          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt | sort -h > all/ipv4.txt
-          cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt | sort -h > all/ipv6.txt
+          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt | sort -h > all/ipv4.txt
+          cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt | sort -h > all/ipv6.txt
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -61,6 +62,7 @@ jobs:
           python utils/merge.py --source=github/ipv4.txt | sort -h > github/ipv4_merged.txt
           python utils/merge.py --source=facebook/ipv4.txt | sort -h > facebook/ipv4_merged.txt
           python utils/merge.py --source=twitter/ipv4.txt | sort -h > twitter/ipv4_merged.txt
+          python utils/merge.py --source=linode/ipv4.txt | sort -h > linode/ipv4_merged.txt
           python utils/merge.py --source=all/ipv4.txt | sort -h > all/ipv4_merged.txt
           # ipv6
           python utils/merge.py --source=google/ipv6.txt | sort -h > google/ipv6_merged.txt
@@ -72,6 +74,7 @@ jobs:
           python utils/merge.py --source=github/ipv6.txt | sort -h > github/ipv6_merged.txt
           python utils/merge.py --source=facebook/ipv6.txt | sort -h > facebook/ipv6_merged.txt
           python utils/merge.py --source=twitter/ipv6.txt | sort -h > twitter/ipv6_merged.txt
+          python utils/merge.py --source=linode/ipv6.txt | sort -h > linode/ipv6_merged.txt
           python utils/merge.py --source=all/ipv6.txt | sort -h > all/ipv6_merged.txt
 
       - name: Commit files

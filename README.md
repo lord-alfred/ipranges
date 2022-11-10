@@ -2,7 +2,7 @@
 
 ![IP Ranges](logo.png)
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta) and Twitter with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter and Linode with daily updates.
 
 All lists are obtained from public sources.
 
@@ -75,6 +75,13 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/twitter/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/twitter/ipv6_merged.txt
 
+### Linode
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv6_merged.txt
+
 ## All-In-One IPs
 
 A list of IP addresses from all sources combined into one file.
@@ -90,7 +97,7 @@ A list of IP addresses from all sources combined into one file.
 - LinkedIn: https://github.com/SecOps-Institute/LinkedInIPLists
 - TOR: https://github.com/SecOps-Institute/Tor-IP-Addresses
 - Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
-- Alibaba, Linode, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
+- Alibaba, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
 
 ## Author
 
