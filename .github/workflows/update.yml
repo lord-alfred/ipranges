@@ -15,6 +15,7 @@ jobs:
 
       - name: Download IPs
         run: |
+          set -x
           bash google/downloader.sh
           bash amazon/downloader.sh
           bash microsoft/downloader.sh
@@ -52,6 +53,7 @@ jobs:
       - name: Merge Ranges
         run: |
           set -euo pipefail
+          set -x
           # ipv4
           python utils/merge.py --source=google/ipv4.txt | sort -h > google/ipv4_merged.txt
           python utils/merge.py --source=amazon/ipv4.txt | sort -h > amazon/ipv4_merged.txt
