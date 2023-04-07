@@ -83,10 +83,10 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv6_merged.txt
 
 ### Telegram
-- IPv4: https://raw.githhubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4.txt
-- IPv4 (merged): https://raw.githhubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4_merged.txt
-- IPv6: https://raw.githhubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6.txt
-- IPv6 (merged): https://raw.githhubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6_merged.txt
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6_merged.txt
 
 ## All-In-One IPs
 
