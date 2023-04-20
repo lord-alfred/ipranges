@@ -2,7 +2,7 @@
 
 ![IP Ranges](logo.png)
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode and Telegram with daily updates.
+List all IP ranges from: Apple, Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode and Telegram with daily updates.
 
 All lists are obtained from public sources.
 
@@ -15,6 +15,10 @@ All lists are obtained from public sources.
 ## Download links
 
 All addresses are stored in `.txt` files with CIDRs, where each range is on a new line.
+
+### Apple
+No downloader or merged file as apple is assigned the whole 17.0.0.0/8 by IANA
+ - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/apple/ipv4.txt
 
 ### Google (Cloud & GoogleBot)
 
