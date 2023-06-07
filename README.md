@@ -16,10 +16,6 @@ All lists are obtained from public sources.
 
 All addresses are stored in `.txt` files with CIDRs, where each range is on a new line.
 
-### Apple
-No downloader or merged file as apple is assigned the whole 17.0.0.0/8 by IANA
- - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/apple/ipv4.txt
-
 ### Google (Cloud & GoogleBot)
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv4.txt
