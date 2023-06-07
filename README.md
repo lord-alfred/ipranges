@@ -2,7 +2,7 @@
 
 ![IP Ranges](logo.png)
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter and Linode with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode and Telegram with daily updates.
 
 All lists are obtained from public sources.
 
@@ -81,6 +81,12 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv4_merged.txt
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv6_merged.txt
+
+### Telegram
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6_merged.txt
 
 ## All-In-One IPs
 
