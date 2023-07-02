@@ -93,7 +93,7 @@ jobs:
           git remote add github "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git pull github ${GITHUB_REF} --ff-only
 
-          # Get name & email from 1st commit
+          # Get name & email from 1st commit (needs `fetch-depth: 0` in step `actions/checkout@v3`)
           git config --local user.email "$(git log --format='%ae' --reverse | head -1)"
           git config --local user.name "$(git log --format='%an' --reverse | head -1)"
 
