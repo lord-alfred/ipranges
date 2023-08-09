@@ -22,4 +22,4 @@ jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/bing.json > /tmp/
 
 
 # sort & uniq
-sort -h /tmp/bing-ipv4.txt | uniq > bing/ipv4.txt
+sort -V /tmp/bing-ipv4.txt | uniq > bing/ipv4.txt

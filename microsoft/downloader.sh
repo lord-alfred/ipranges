@@ -32,5 +32,5 @@ download_and_parse "57062"
 
 
 # sort & uniq
-sort -h /tmp/microsoft-ipv4.txt | uniq > microsoft/ipv4.txt
-sort -h /tmp/microsoft-ipv6.txt | uniq > microsoft/ipv6.txt
+sort -V /tmp/microsoft-ipv4.txt | uniq > microsoft/ipv4.txt
+sort -V /tmp/microsoft-ipv6.txt | uniq > microsoft/ipv6.txt

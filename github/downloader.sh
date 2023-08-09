@@ -22,5 +22,5 @@ grep ':' /tmp/github-all.txt > /tmp/github-ipv6.txt
 
 
 # sort & uniq
-sort -h /tmp/github-ipv4.txt | uniq > github/ipv4.txt
-sort -h /tmp/github-ipv6.txt | uniq > github/ipv6.txt
+sort -V /tmp/github-ipv4.txt | uniq > github/ipv4.txt
+sort -V /tmp/github-ipv6.txt | uniq > github/ipv6.txt

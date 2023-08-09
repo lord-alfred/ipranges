@@ -59,5 +59,5 @@ grep ':' /tmp/netblocks.txt >> /tmp/google-ipv6.txt
 
 
 # sort & uniq
-sort -h /tmp/google-ipv4.txt | uniq > google/ipv4.txt
-sort -h /tmp/google-ipv6.txt | uniq > google/ipv6.txt
+sort -V /tmp/google-ipv4.txt | uniq > google/ipv4.txt
+sort -V /tmp/google-ipv6.txt | uniq > google/ipv6.txt

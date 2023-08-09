@@ -32,5 +32,5 @@ grep ':' /tmp/twitter.txt > /tmp/twitter-ipv6.txt
 
 
 # sort & uniq
-sort -h /tmp/twitter-ipv4.txt | uniq > twitter/ipv4.txt
-sort -h /tmp/twitter-ipv6.txt | uniq > twitter/ipv6.txt
+sort -V /tmp/twitter-ipv4.txt | uniq > twitter/ipv4.txt
+sort -V /tmp/twitter-ipv6.txt | uniq > twitter/ipv6.txt

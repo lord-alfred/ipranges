@@ -32,5 +32,5 @@ grep ':' /tmp/facebook.txt > /tmp/facebook-ipv6.txt
 
 
 # sort & uniq
-sort -h /tmp/facebook-ipv4.txt | uniq > facebook/ipv4.txt
-sort -h /tmp/facebook-ipv6.txt | uniq > facebook/ipv6.txt
+sort -V /tmp/facebook-ipv4.txt | uniq > facebook/ipv4.txt
+sort -V /tmp/facebook-ipv6.txt | uniq > facebook/ipv6.txt

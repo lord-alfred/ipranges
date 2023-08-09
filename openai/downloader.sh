@@ -17,4 +17,4 @@ grep -v ':' /tmp/openai.txt > /tmp/openai-ipv4.txt
 
 
 # sort & uniq
-sort -h /tmp/openai-ipv4.txt | uniq > openai/ipv4.txt
+sort -V /tmp/openai-ipv4.txt | uniq > openai/ipv4.txt
