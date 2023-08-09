@@ -29,10 +29,11 @@ jobs:
           bash twitter/downloader.sh
           bash linode/downloader.sh
           bash telegram/downloader.sh
+          bash openai/downloader.sh
 
       - name: Create All-In-One ranges
         run: |
-          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt | sort -h | uniq > all/ipv4.txt
+          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt | sort -h | uniq > all/ipv4.txt
           cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt | sort -h | uniq > all/ipv6.txt
 
       - name: Set up Python 3.7
@@ -69,6 +70,7 @@ jobs:
           python utils/merge.py --source=twitter/ipv4.txt | sort -h > twitter/ipv4_merged.txt
           python utils/merge.py --source=linode/ipv4.txt | sort -h > linode/ipv4_merged.txt
           python utils/merge.py --source=telegram/ipv4.txt | sort -h > telegram/ipv4_merged.txt
+          python utils/merge.py --source=openai/ipv4.txt | sort -h > openai/ipv4_merged.txt
           python utils/merge.py --source=all/ipv4.txt | sort -h > all/ipv4_merged.txt
           # ipv6
           python utils/merge.py --source=google/ipv6.txt | sort -h > google/ipv6_merged.txt
@@ -83,6 +85,7 @@ jobs:
           python utils/merge.py --source=linode/ipv6.txt | sort -h > linode/ipv6_merged.txt
           python utils/merge.py --source=telegram/ipv6.txt | sort -h > telegram/ipv6_merged.txt
           python utils/merge.py --source=all/ipv6.txt | sort -h > all/ipv6_merged.txt
+          # openai not provide ipv6
 
       - name: Commit files
         env:
