@@ -23,6 +23,15 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/google/ipv6_merged.txt
 
+### Google (GoogleBot)
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/googlebot/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/googlebot/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/googlebot/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/googlebot/ipv6_merged.txt
+
+To allow GoogleBot, block all Google IP addresses and then allow the GoogleBot addresses.
+
 ### Bing (Bingbot)
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/bing/ipv4.txt
