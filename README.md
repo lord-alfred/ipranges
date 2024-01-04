@@ -2,7 +2,7 @@
 
 ![IP Ranges](logo.png)
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode, Telegram and OpenAI (GPTBot) with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode, Telegram, OpenAI (GPTBot) and CloudFlare with daily updates.
 
 All lists are obtained from public sources.
 
@@ -83,6 +83,7 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/linode/ipv6_merged.txt
 
 ### Telegram
+
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv4_merged.txt
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/telegram/ipv6.txt
@@ -92,6 +93,13 @@ All addresses are stored in `.txt` files with CIDRs, where each range is on a ne
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/openai/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/openai/ipv4_merged.txt
+
+### CloudFlare
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/cloudflare/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/cloudflare/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/cloudflare/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/cloudflare/ipv6_merged.txt
 
 ## All-In-One IPs
 
