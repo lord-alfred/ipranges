@@ -19,6 +19,7 @@ jobs:
         run: |
           set -x
           bash google/downloader.sh
+          bash googlebot/downloader.sh
           bash amazon/downloader.sh
           bash microsoft/downloader.sh
           bash oracle/downloader.sh
@@ -34,8 +35,8 @@ jobs:
 
       - name: Create All-In-One ranges
         run: |
-          cat google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt cloudflare/ipv4.txt | sort -V | uniq > all/ipv4.txt
-          cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt cloudflare/ipv6.txt | sort -V | uniq > all/ipv6.txt
+          cat google/ipv4.txt googlebot/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt cloudflare/ipv4.txt | sort -V | uniq > all/ipv4.txt
+          cat google/ipv6.txt googlebot/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt cloudflare/ipv6.txt | sort -V | uniq > all/ipv6.txt
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -61,6 +62,7 @@ jobs:
           set -x
           # ipv4
           python utils/merge.py --source=google/ipv4.txt | sort -V > google/ipv4_merged.txt
+          python utils/merge.py --source=googlebot/ipv4.txt | sort -V > googlebot/ipv4_merged.txt
           python utils/merge.py --source=amazon/ipv4.txt | sort -V > amazon/ipv4_merged.txt
           python utils/merge.py --source=microsoft/ipv4.txt | sort -V > microsoft/ipv4_merged.txt
           python utils/merge.py --source=oracle/ipv4.txt | sort -V > oracle/ipv4_merged.txt
@@ -76,6 +78,7 @@ jobs:
           python utils/merge.py --source=all/ipv4.txt | sort -V > all/ipv4_merged.txt
           # ipv6
           python utils/merge.py --source=google/ipv6.txt | sort -V > google/ipv6_merged.txt
+          python utils/merge.py --source=googlebot/ipv6.txt | sort -V > googlebot/ipv6_merged.txt
           python utils/merge.py --source=amazon/ipv6.txt | sort -V > amazon/ipv6_merged.txt
           python utils/merge.py --source=microsoft/ipv6.txt | sort -V > microsoft/ipv6_merged.txt
           # oracle not provide ipv6
