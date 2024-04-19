@@ -2,7 +2,7 @@
 
 ![IP Ranges](logo.png)
 
-List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft (Azure), Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode, Telegram, OpenAI (GPTBot) and CloudFlare with daily updates.
+List all IP ranges from: Google (Cloud & GoogleBot), Bing (Bingbot), Amazon (AWS), Microsoft, Oracle (Cloud), DigitalOcean, GitHub, Facebook (Meta), Twitter, Linode, Telegram, OpenAI (GPTBot) and CloudFlare with daily updates.
 
 All lists are obtained from public sources.
 
@@ -44,7 +44,7 @@ To allow GoogleBot, block all Google IP addresses and then allow the GoogleBot a
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/amazon/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/amazon/ipv6_merged.txt
 
-### Microsoft (Azure)
+### Microsoft
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/microsoft/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/microsoft/ipv4_merged.txt
