@@ -30,7 +30,7 @@ jobs:
           bash twitter/downloader.sh
           bash linode/downloader.sh
           bash telegram/downloader.sh
-          bash openai/downloader.sh
+          bash openai/downloader.sh || echo 'GPTBot download failed'  # TODO: fixme
           bash cloudflare/downloader.sh
 
       - name: Create All-In-One ranges
