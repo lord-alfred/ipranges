@@ -110,6 +110,13 @@ To allow GoogleBot, block all Google IP addresses and then allow the GoogleBot a
 - IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/cloudflare/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/cloudflare/ipv6_merged.txt
 
+### CloudFlare
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/vultr/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/vultr/ipv4_merged.txt
+- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/vultr/ipv6.txt
+- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/vultr/ipv6_merged.txt
+
 ## All-In-One IPs
 
 A list of IP addresses from all sources combined into one file.
