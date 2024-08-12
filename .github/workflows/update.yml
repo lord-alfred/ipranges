@@ -32,11 +32,12 @@ jobs:
           bash telegram/downloader.sh
           bash openai/downloader.sh || echo 'GPTBot download failed'  # TODO: fixme
           bash cloudflare/downloader.sh
+          bash vultr/downloader.sh
 
       - name: Create All-In-One ranges
         run: |
-          cat google/ipv4.txt googlebot/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt cloudflare/ipv4.txt | sort -V | uniq > all/ipv4.txt
-          cat google/ipv6.txt googlebot/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt cloudflare/ipv6.txt | sort -V | uniq > all/ipv6.txt
+          cat google/ipv4.txt googlebot/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt cloudflare/ipv4.txt vultr/ipv4.txt | sort -V | uniq > all/ipv4.txt
+          cat google/ipv6.txt googlebot/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt cloudflare/ipv6.txt vultr/ipv6.txt | sort -V | uniq > all/ipv6.txt
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
@@ -75,6 +76,7 @@ jobs:
           python utils/merge.py --source=telegram/ipv4.txt | sort -V > telegram/ipv4_merged.txt
           python utils/merge.py --source=openai/ipv4.txt | sort -V > openai/ipv4_merged.txt
           python utils/merge.py --source=cloudflare/ipv4.txt | sort -V > cloudflare/ipv4_merged.txt
+          python utils/merge.py --source=vultr/ipv4.txt | sort -V > vultr/ipv4_merged.txt
           python utils/merge.py --source=all/ipv4.txt | sort -V > all/ipv4_merged.txt
           # ipv6
           python utils/merge.py --source=google/ipv6.txt | sort -V > google/ipv6_merged.txt
@@ -91,6 +93,7 @@ jobs:
           python utils/merge.py --source=telegram/ipv6.txt | sort -V > telegram/ipv6_merged.txt
           # openai not provide ipv6
           python utils/merge.py --source=cloudflare/ipv6.txt | sort -V > cloudflare/ipv6_merged.txt
+          python utils/merge.py --source=vultr/ipv6.txt | sort -V > vultr/ipv6_merged.txt
           python utils/merge.py --source=all/ipv6.txt | sort -V > all/ipv6_merged.txt
 
       - name: Commit files
