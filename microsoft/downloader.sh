@@ -10,7 +10,7 @@ set -x
 
 # get from public ranges
 download_and_parse_json() {
-    URL="$(curl -s https://www.microsoft.com/en-us/download/confirmation.aspx?id=${1} | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | grep ServiceTags_ | head -1 | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//')"
+    URL="$(curl -s https://www.microsoft.com/en-us/download/details.aspx?id=${1} | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | grep ServiceTags_ | head -1 | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//')"
     curl --connect-timeout 60 --retry 3 --retry-delay 15 -s "${URL}" > /tmp/microsoft.json
     jq '.values[] | [.properties] | .[].addressPrefixes[] | select(. != null)' -r /tmp/microsoft.json > /tmp/microsoft-all.txt
 
@@ -22,7 +22,7 @@ download_and_parse_json() {
 }
 
 download_and_parse_csv() {
-    URL="$(curl -s https://www.microsoft.com/en-us/download/confirmation.aspx?id=${1} | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | grep msft-public-ips | head -1 | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//')"
+    URL="$(curl -s https://www.microsoft.com/en-us/download/details.aspx?id=${1} | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | grep msft-public-ips | head -1 | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//')"
     curl --connect-timeout 60 --retry 3 --retry-delay 15 -s "${URL}" > /tmp/microsoft.csv
     awk -F ',' '{print $1}' /tmp/microsoft.csv | grep -E '[:.]+' > /tmp/microsoft-all.txt
 
