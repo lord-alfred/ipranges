@@ -8,7 +8,7 @@ jobs:
   updater:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -39,13 +39,13 @@ jobs:
           cat google/ipv4.txt googlebot/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt cloudflare/ipv4.txt vultr/ipv4.txt | sort -V | uniq > all/ipv4.txt
           cat google/ipv6.txt googlebot/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt cloudflare/ipv6.txt vultr/ipv6.txt | sort -V | uniq > all/ipv6.txt
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.7'
+          python-version: '3.13' 
 
       - name: Cache pip
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('utils/requirements.txt') }}
