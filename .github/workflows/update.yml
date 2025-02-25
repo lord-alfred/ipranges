@@ -13,36 +13,12 @@ jobs:
           fetch-depth: 0
 
       - name: Install WHOIS client
-        run: sudo apt install -y whois
-
-      - name: Download IPs
-        run: |
-          set -x
-          bash google/downloader.sh
-          bash googlebot/downloader.sh
-          bash amazon/downloader.sh
-          bash microsoft/downloader.sh
-          bash oracle/downloader.sh
-          bash digitalocean/downloader.sh
-          bash bing/downloader.sh
-          bash github/downloader.sh
-          bash facebook/downloader.sh
-          bash twitter/downloader.sh
-          bash linode/downloader.sh
-          bash telegram/downloader.sh
-          bash openai/downloader.sh || echo 'GPTBot download failed'  # TODO: fixme
-          bash cloudflare/downloader.sh
-          bash vultr/downloader.sh
-
-      - name: Create All-In-One ranges
-        run: |
-          cat google/ipv4.txt googlebot/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt openai/ipv4.txt cloudflare/ipv4.txt vultr/ipv4.txt | sort -V | uniq > all/ipv4.txt
-          cat google/ipv6.txt googlebot/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt cloudflare/ipv6.txt vultr/ipv6.txt | sort -V | uniq > all/ipv6.txt
+        run: sudo apt install -y whois parallel gawk
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13' 
+          python-version: '3.13'
 
       - name: Cache pip
         uses: actions/cache@v4
@@ -57,44 +33,28 @@ jobs:
         run: |
           pip install -r utils/requirements.txt
 
-      - name: Merge Ranges
+      - name: Download IPs
         run: |
           set -euo pipefail
           set -x
-          # ipv4
-          python utils/merge.py --source=google/ipv4.txt | sort -V > google/ipv4_merged.txt
-          python utils/merge.py --source=googlebot/ipv4.txt | sort -V > googlebot/ipv4_merged.txt
-          python utils/merge.py --source=amazon/ipv4.txt | sort -V > amazon/ipv4_merged.txt
-          python utils/merge.py --source=microsoft/ipv4.txt | sort -V > microsoft/ipv4_merged.txt
-          python utils/merge.py --source=oracle/ipv4.txt | sort -V > oracle/ipv4_merged.txt
-          python utils/merge.py --source=digitalocean/ipv4.txt | sort -V > digitalocean/ipv4_merged.txt
-          python utils/merge.py --source=bing/ipv4.txt | sort -V > bing/ipv4_merged.txt
-          python utils/merge.py --source=github/ipv4.txt | sort -V > github/ipv4_merged.txt
-          python utils/merge.py --source=facebook/ipv4.txt | sort -V > facebook/ipv4_merged.txt
-          python utils/merge.py --source=twitter/ipv4.txt | sort -V > twitter/ipv4_merged.txt
-          python utils/merge.py --source=linode/ipv4.txt | sort -V > linode/ipv4_merged.txt
-          python utils/merge.py --source=telegram/ipv4.txt | sort -V > telegram/ipv4_merged.txt
-          python utils/merge.py --source=openai/ipv4.txt | sort -V > openai/ipv4_merged.txt
-          python utils/merge.py --source=cloudflare/ipv4.txt | sort -V > cloudflare/ipv4_merged.txt
-          python utils/merge.py --source=vultr/ipv4.txt | sort -V > vultr/ipv4_merged.txt
-          python utils/merge.py --source=all/ipv4.txt | sort -V > all/ipv4_merged.txt
-          # ipv6
-          python utils/merge.py --source=google/ipv6.txt | sort -V > google/ipv6_merged.txt
-          python utils/merge.py --source=googlebot/ipv6.txt | sort -V > googlebot/ipv6_merged.txt
-          python utils/merge.py --source=amazon/ipv6.txt | sort -V > amazon/ipv6_merged.txt
-          python utils/merge.py --source=microsoft/ipv6.txt | sort -V > microsoft/ipv6_merged.txt
-          # oracle not provide ipv6
-          python utils/merge.py --source=digitalocean/ipv6.txt | sort -V > digitalocean/ipv6_merged.txt
-          # bing not provide ipv6
-          python utils/merge.py --source=github/ipv6.txt | sort -V > github/ipv6_merged.txt
-          python utils/merge.py --source=facebook/ipv6.txt | sort -V > facebook/ipv6_merged.txt
-          python utils/merge.py --source=twitter/ipv6.txt | sort -V > twitter/ipv6_merged.txt
-          python utils/merge.py --source=linode/ipv6.txt | sort -V > linode/ipv6_merged.txt
-          python utils/merge.py --source=telegram/ipv6.txt | sort -V > telegram/ipv6_merged.txt
-          # openai not provide ipv6
-          python utils/merge.py --source=cloudflare/ipv6.txt | sort -V > cloudflare/ipv6_merged.txt
-          python utils/merge.py --source=vultr/ipv6.txt | sort -V > vultr/ipv6_merged.txt
-          python utils/merge.py --source=all/ipv6.txt | sort -V > all/ipv6_merged.txt
+          find . -name downloader.sh | sort -h | awk '{print "Executing "$1"...";system("bash "$1)}'
+
+      - name: Create All-In-One ranges
+        run: |
+          cat $(find . -name ipv4.txt | sort -h) | sort -V | uniq > all/ipv4.txt
+          cat $(find . -name ipv6.txt | sort -h) | sort -V | uniq > all/ipv6.txt
+
+      - name: Merge ipv4 Ranges
+        run: |
+          set -euo pipefail
+          set -x
+          find . -name ipv4.txt | sort -h | parallel --will-cite -j 1 echo "Merging '{}'"';'python utils/merge.py --source={} '|'  sort -V '>' {.}_merged.txt
+
+      - name: Merge ipv6 Ranges
+        run: |
+          set -euo pipefail
+          set -x
+          find . -name ipv6.txt | sort -h | parallel --will-cite -j 1 echo "Merging '{}'"';'python utils/merge.py --source={} '|' sort -V '>' {.}_merged.txt
 
       - name: Commit files
         env:
