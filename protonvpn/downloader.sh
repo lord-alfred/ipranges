@@ -15,10 +15,8 @@ jq '.LogicalServers[].Servers[].EntryIP' -r /tmp/protonvpn.json | tr -d '"' > /t
 # save ipv4
 grep -v ':' /tmp/protonvpn-all.txt > /tmp/protonvpn-ipv4.txt
 
-# save ipv6
-grep ':' /tmp/protonvpn-all.txt > /tmp/protonvpn-ipv6.txt
+# ipv6 not provided
 
 
 # sort & uniq
 sort -V /tmp/protonvpn-ipv4.txt | uniq > protonvpn/ipv4.txt
-sort -V /tmp/protonvpn-ipv6.txt | uniq > protonvpn/ipv6.txt
