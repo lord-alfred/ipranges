@@ -128,8 +128,6 @@ To allow GoogleBot, block all Google IP addresses and then allow the GoogleBot a
 
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/protonvpn/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/protonvpn/ipv4_merged.txt
-- IPv6: https://raw.githubusercontent.com/lord-alfred/ipranges/main/protonvpn/ipv6.txt
-- IPv6 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/protonvpn/ipv6_merged.txt
 
 ## All-In-One IPs
 
