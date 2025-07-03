@@ -24,12 +24,12 @@ download_and_parse_json() {
     -H 'sec-fetch-user: ?1' \
     -H 'upgrade-insecure-requests: 1' \
     -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' \
-    > /tmp/openai.json
+    > /tmp/perplexity.json
 
-    jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/openai.json > /tmp/openai.txt
+    jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/perplexity.json > /tmp/perplexity.txt
 
     # save ipv4
-    grep -v ':' /tmp/openai.txt >> /tmp/openai-ipv4.txt
+    grep -v ':' /tmp/perplexity.txt >> /tmp/perplexity-ipv4.txt
 
     # ipv6 not provided
 
@@ -41,4 +41,4 @@ download_and_parse_json "https://www.perplexity.ai/perplexity-user.json"
 
 
 # sort & uniq
-sort -V /tmp/openai-ipv4.txt | uniq > openai/ipv4.txt
+sort -V /tmp/perplexity-ipv4.txt | uniq > perplexity/ipv4.txt
