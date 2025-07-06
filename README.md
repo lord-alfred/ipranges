@@ -146,6 +146,11 @@ A list of IP addresses from all sources combined into one file.
 - Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
 - Alibaba, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
 
+### Perplexity 
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4_merged.txt
+
 ## Author
 
 Lord_Alfred
