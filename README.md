@@ -129,6 +129,11 @@ To allow GoogleBot, block all Google IP addresses and then allow the GoogleBot a
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/protonvpn/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/protonvpn/ipv4_merged.txt
 
+### Perplexity 
+
+- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4.txt
+- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4_merged.txt
+
 ## All-In-One IPs
 
 A list of IP addresses from all sources combined into one file.
@@ -146,10 +151,6 @@ A list of IP addresses from all sources combined into one file.
 - Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
 - Alibaba, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
 
-### Perplexity 
-
-- IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4.txt
-- IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4_merged.txt
 
 ## Author
 
