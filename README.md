@@ -134,6 +134,14 @@ To allow GoogleBot, block all Google IP addresses and then allow the GoogleBot a
 - IPv4: https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4.txt
 - IPv4 (merged): https://raw.githubusercontent.com/lord-alfred/ipranges/main/perplexity/ipv4_merged.txt
 
+### StatusCake
+- IPv4: https://app.statuscake.com/Workfloor/Locations.php?format=txt
+
+### Pingdom
+
+- IPv4: https://my.pingdom.com/probes/ipv4
+- IPv6: https://my.pingdom.com/probes/ipv6
+
 ## All-In-One IPs
 
 A list of IP addresses from all sources combined into one file.
